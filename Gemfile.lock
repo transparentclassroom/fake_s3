@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fake_s3 (1.0)
+    fake_s3 (0.9)
 
 GEM
   remote: https://rubygems.org/
@@ -17,4 +17,4 @@ DEPENDENCIES
   rake (~> 10.0)
 
 BUNDLED WITH
-   1.16.2
+   1.17.2
