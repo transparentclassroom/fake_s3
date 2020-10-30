@@ -47,8 +47,8 @@ module FakeS3
       "https://test.com.s3.amazonaws.com/#{@key}"
     end
 
-    def presigned_url
-      "https://test.com.s3.amazonaws.com/#{@key}?X-Amz-Algorithm=presigned"
+    def presigned_url(method = :get, expires_in: 1.minute)
+      "https://test.com.s3.amazonaws.com/#{@key}?X-Amz-Credential=123&method=#{method}&expires_in=#{expires_in.to_s}"
     end
 
     class FakeObjectOutput
