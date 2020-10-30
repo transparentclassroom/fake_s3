@@ -7,4 +7,4 @@
 
 ### Changed
 
-- [#2] (https://github.com/transparentclassroom/fake_s3/pull/2) BREAKING: Gets rid of `tc.com` portion of fake URL for `FakeS3::Object#public_url`
+- [#2](https://github.com/transparentclassroom/fake_s3/pull/2) BREAKING: Gets rid of `tc.com` portion of fake URL for `FakeS3::Object#public_url`
