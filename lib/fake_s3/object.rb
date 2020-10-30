@@ -44,7 +44,11 @@ module FakeS3
     end
 
     def public_url
-      "https://test.tc.com.s3.amazonaws.com/#{@key}"
+      "https://test.com.s3.amazonaws.com/#{@key}"
+    end
+
+    def presigned_url
+      "https://test.com.s3.amazonaws.com/#{@key}?X-Amz-Algorithm=presigned"
     end
 
     class FakeObjectOutput
