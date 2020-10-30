@@ -44,7 +44,11 @@ module FakeS3
     end
 
     def public_url
-      "https://test.tc.com.s3.amazonaws.com/#{@key}"
+      "https://test.com.s3.amazonaws.com/#{@key}"
+    end
+
+    def presigned_url(method = :get, expires_in: 1.minute)
+      "https://test.com.s3.amazonaws.com/#{@key}?X-Amz-Credential=123&method=#{method}&expires_in=#{expires_in.to_s}"
     end
 
     class FakeObjectOutput
