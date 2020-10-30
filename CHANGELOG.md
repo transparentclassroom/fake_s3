@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- [#3](https://github.com/transparentclassroom/fake_s3/pull/3) Dependency updates
+
 ## [0.10.0] - 2020-10-30
 ### Added
 
