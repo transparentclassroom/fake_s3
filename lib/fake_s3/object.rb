@@ -43,6 +43,10 @@ module FakeS3
       location.bucket.move_to(self, location)
     end
 
+    def delete
+      bucket.delete_objects(delete: {objects: [{key: key}]})
+    end
+
     def public_url
       "https://test.com.s3.amazonaws.com/#{@key}"
     end

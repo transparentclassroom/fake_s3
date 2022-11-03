@@ -19,6 +19,13 @@ module FakeS3
       @objects[key] ||= FakeS3::Object.new(self, key, nil)
     end
 
+    def delete_objects(args) 
+      args[:delete][:objects].each do |objects|
+        @objects.delete(objects[:key])
+      end
+    end
+
+    # this is a method for tests to see the contents of a fake bucket
     def keys_to_contents
       @objects.map_to_hash do |key, obj|
         [key, obj.get.body.read]
