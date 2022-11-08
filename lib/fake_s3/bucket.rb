@@ -11,8 +11,12 @@ module FakeS3
       @objects = {}
     end
 
-    def objects(_ = {})
-      @objects.keep_if(&:exists?)
+    def objects(opts = {})
+      @objects
+        .find_all do |key, obj| 
+          obj.exists? && (!opts[:prefix] || key.starts_with?(opts[:prefix]))
+        end
+        .map {|_key, obj| obj }
     end
 
     def object(key)

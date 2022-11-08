@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [0.12.0] - 2022-11-08
+
+- fix bug w/ bucket.objects
+- allow bucket.objects() to take prefix
+
 ## [0.11.0] - 2022-11-03
 
 - add delete on object and delete_objects on bucket
